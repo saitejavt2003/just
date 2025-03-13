@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/saitejavt2003/TERRAFROM-aws.git' // Replace with your repo URL
+                git branch: 'main', url: 'https://github.com/saitejavt2003/TERRAFROM-aws.git'
             }
         }
 
@@ -19,7 +19,6 @@ pipeline {
             }
         }
 
-       
         stage('Terraform Plan') {
             steps {
                 bat 'terraform plan -out=tfplan'
@@ -36,7 +35,6 @@ pipeline {
         stage('Terraform Destroy') {
             steps {
                 input message: 'Do you want to destroy the Terraform infrastructure?'
-                bat 'terraform destroy -target=module.ec2.aws_instance.server -auto-approve'
                 bat 'terraform destroy -auto-approve'
             }
         }
