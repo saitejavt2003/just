@@ -1,13 +1,13 @@
-# S3 Bucket for Terraform State
+
 resource "aws_s3_bucket" "s3_bucket" {
   bucket = var.s3_bucket_name
 
   lifecycle {
-    prevent_destroy = true  # Prevents accidental deletion
+    prevent_destroy = true  
   }
 }
 
-# DynamoDB Table for Terraform State Locking
+
 resource "aws_dynamodb_table" "terraform_lock" {
   name           = var.dynamodb_table_name
   billing_mode   = "PAY_PER_REQUEST"
@@ -19,6 +19,6 @@ resource "aws_dynamodb_table" "terraform_lock" {
   }
 
   lifecycle {
-    prevent_destroy = true  # Prevents accidental deletion
+    prevent_destroy = true  
   }
 }
