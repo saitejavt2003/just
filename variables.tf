@@ -25,7 +25,7 @@ variable "vpc_cidr_block" {
 variable "s3_bucket_name" {
   description = "S3 bucket name for Terraform backend"
   type        = string
-  default     = "sai-s3-demo-xyz"
+  default     = "saitejavt-s3-demo-xyz"
 }
 
 variable "dynamodb_table_name" {
