@@ -17,8 +17,8 @@ module "ec2" {
   security_group = module.security_group.security_group_id
 }
 
-module "s3_backend" {
+/*module "s3_backend" {
   source              = "./modules/S3" 
   s3_bucket_name      = var.s3_bucket_name
   dynamodb_table_name = var.dynamodb_table_name
-}
+}*/

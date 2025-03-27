@@ -1,4 +1,4 @@
-/*terraform {
+terraform {
  backend "s3" {
     bucket         = "saitejavt-s3-demo-xyz" 
     key            = "sai/terraform.tfstate"
@@ -6,4 +6,4 @@
     encrypt        = true
     dynamodb_table = "terraform-lock"
   }
-}*/
+}
