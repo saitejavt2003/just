@@ -23,12 +23,13 @@ variable "vpc_cidr_block" {
   default     = "10.0.0.0/16"  
 }
 variable "s3_bucket_name" {
-  description = "S3 bucket name for Terraform state"
+  description = "S3 bucket name for Terraform backend"
   type        = string
   default     = "sai-s3-demo-xyz"
 }
 
 variable "dynamodb_table_name" {
-  description = "DynamoDB table name for Terraform state locking"
+  description = "DynamoDB table for Terraform state locking"
   type        = string
   default     = "terraform-lock"
+}

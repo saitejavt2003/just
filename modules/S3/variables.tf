@@ -1,17 +1,9 @@
-variable "aws_region" {
-  description = "AWS region for infrastructure"
-  type        = string
-  default = "us-east-1"
-
-}
-
 variable "s3_bucket_name" {
-  description = "S3 bucket name for Terraform state"
+  description = "S3 bucket name"
   type        = string
-  default     = "sai-s3-demo-xyz"
 }
 
 variable "dynamodb_table_name" {
-  description = "DynamoDB table name for Terraform state locking"
+  description = "DynamoDB table name"
   type        = string
-  default     = "terraform-lock"
+}
